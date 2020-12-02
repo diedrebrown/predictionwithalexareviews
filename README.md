@@ -7,13 +7,15 @@ This project aims to analyze these reviews and ratings of Amazon Alexa devices f
 
 The project folders include the following:
 
-- Original Datasets
+- **Original Datasets**
 	- These datasets were obtained from [kaggle] (https://www.kaggle.com/) and include [Amazon Reviews 2017] (https://www.kaggle.com/PromptCloudHQ/amazon-echo-dot-2-reviews-dataset), which became the training set; and, [Amazon Reviews 2018] (https://www.kaggle.com/sid321axn/amazon-alexa-reviews), which became the test set.
-- Images
+- **Images**
 	- This folder includes charts created during the exploratory data analysis and sentiment analysis of the project. For more information on these charts, please refer to our paper and/or our presentation.
-- Models
+- **Models**
 	- These are notebooks containing the models developed during this project.
-- Notebooks
+- **Notebooks**
 	- These notebooks include the exploratory data analysis and sentiment analysis.
-- Presentation
+- **Presentation**
 	- These files include our paper and a pdf of our presentation, which was delivered on 8 December 2020. 
+
+To use these files:
