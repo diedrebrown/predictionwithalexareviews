@@ -8,7 +8,7 @@ This project aims to analyze these reviews and ratings of Amazon Alexa devices f
 The project folders include the following:
 
 - **Original Datasets**
-	- These datasets were obtained from [kaggle] (https://www.kaggle.com/) and include [Amazon Reviews 2017] (https://www.kaggle.com/PromptCloudHQ/amazon-echo-dot-2-reviews-dataset), which became the training set; and, [Amazon Reviews 2018] (https://www.kaggle.com/sid321axn/amazon-alexa-reviews), which became the test set.
+	- These datasets were obtained from [kaggle](https://www.kaggle.com/) and include [Amazon Reviews 2017](https://www.kaggle.com/PromptCloudHQ/amazon-echo-dot-2-reviews-dataset), which became the training set; and, [Amazon Reviews 2018](https://www.kaggle.com/sid321axn/amazon-alexa-reviews), which became the test set.
 - **Images**
 	- This folder includes charts created during the exploratory data analysis and sentiment analysis of the project. For more information on these charts, please refer to our paper and/or our presentation.
 - **Models**
