@@ -12,10 +12,30 @@ The project folders include the following:
 - **Images**
 	- This folder includes charts created during the exploratory data analysis and sentiment analysis of the project. For more information on these charts, please refer to our paper and/or our presentation.
 - **Models**
-	- These are notebooks containing the models developed during this project.
+	- These are notebooks containing the models developed during this project:
+	* [Logisting Regression + TF-IDF and BERT](rating_prediction_log_reg.ipynb)
+
+	* [Random Forest + TF-IDF and BERT](rating_prediction_ensemble.ipynb)
+
+	* [LSTM Neural Network](rating_prediction_neural_net.ipynb)
+	
 - **Notebooks**
 	- These notebooks include the exploratory data analysis and sentiment analysis.
 - **Presentation**
 	- These files include our paper and a pdf of our presentation, which was delivered on 8 December 2020. 
 
 To use these files:
+
+
+- **Results**
+We trained our model on the data from 2017 and measured accuracy and F1 score on the data from 2018. 
+
+| Method           | Accuracy      | F1    |
+| -----------------|:-------------:| -----:|
+| TF-IDF + Log Reg |  0.68         |  0.68 |
+| BERT + Log Reg   |  0.49         |  0.56 |
+| TF-IDF + RF      |  0.72         |  0.68 |
+| BERT +  RF       |  0.65         |  0.59 |
+| LSTM             |  0.71         |  0.69 |
+
+TF-IDF + Random Forest and LSTM neural network gave the best scores on the test set. As we can see from the table above, BERT embeddings didn't give a boost in performance for our data. Also, such a simple method as TF-IDF encoding + Logistic Regression gave pretty good scores in comparison to Random Forest and Neural Network. 
