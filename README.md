@@ -12,7 +12,7 @@ The project folders include the following:
 - **[Original Datasets](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/original_datasets)**
 	- These datasets were obtained from [kaggle](https://www.kaggle.com/) and include [Amazon Reviews 2017](https://www.kaggle.com/PromptCloudHQ/amazon-echo-dot-2-reviews-dataset), which became the training set; and, [Amazon Reviews 2018](https://www.kaggle.com/sid321axn/amazon-alexa-reviews), which became the test set.
 - **[Data](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/data**)**
-	-This folder contains the cleaned versions of the datasets used during our analysis.
+	- This folder contains the cleaned versions of the datasets used during our analysis.
 - **[Images](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/img)**
 	- This folder includes charts created during the exploratory data analysis and sentiment analysis of the project. For more information on these charts, please refer to our paper and/or our presentation.
 - **[Models](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/models)**
@@ -22,7 +22,7 @@ The project folders include the following:
 - **[Notebooks](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/notebooks)**
 	- Exploratory Data Analysis 
 	- Text Sentiment Analysis & Topic Modeling
-- **[Presentation]()**
+- **[Presentation](***ADD LINK HERE***)**
 	- Here you will find a pdf of our presentation, which was delivered on 8 December 2020. 
 
 ## Methods:
@@ -32,6 +32,12 @@ We each began the study by conducting an extensive exploratory data analysis (ED
 - Methods of Sentiment Analysis:
 	- Used the spaCy library to normalize the data to make patterns more easily detectable by removing stopwords. The spaCy library was used to do this, as it is the most robust and efficient library for natural language processing. As spaCy can be applied to many languages and has integrations built in for neural network models, it provided eased much of the work we needed.
 	- Creation of a document term matrix for use in topic modeling with Latent Dirichlet Allocation (LDA). The LDA was used to finds groups of words (topics) that appear frequently together.
+- Rating Star Predictions with Machine Learning Models ***ADD WHAT THESE MODELS DO/REPRESENT***:
+	- Tf-IDF Encoding
+	- Logistic Regression 
+	- Random Forest 
+	- Bidirectional Encoder Representations from Transformers (BERT)
+	- LSTM Neural Network
 
 ## Findings:
 We trained our model with the data from the 2017 Alexa Ratings Dataset and measured its accuracy and F1 score using the 2018 Alexa Ratings Datset.
@@ -47,9 +53,19 @@ We trained our model with the data from the 2017 Alexa Ratings Dataset and measu
 
 TF-IDF + Random Forest and LSTM neural network gave the best scores on the test set. As we can see from the table above, BERT embeddings didn't give a boost in performance for our data. Also, such a simple method as TF-IDF encoding + Logistic Regression gave pretty good scores in comparison to Random Forest and Neural Network. 
 
-
+**ADD FINDINGS FROM SENTIMENT ANALYSIS**
 
 ## Study Limitations:
-
+- _Small Dataset & the Balance of the Dataset_ As 2018 market reports revealed, approximately 39 million Americans own an Amazon Echo or Google Home (Perez, 2018). While this is a substantial figure, the amount of publicly data available to analyze these user's experience is limited. Furthermore, the users that tend to leave reviews on consumer sites like Amazon tend to be very positive or negative, which results in imbalanced data.    
+- _Time of Year Seasonality_ The 2017 dataset covers Sept 1st - Oct 30th. While the 2018 set covers only the month of July. As we discovered with an outlier review, there was a reduction in price this month due to Amazon Prime Day specials.
+- _Paid Reviews?_ It is possible that the data contained paid reviews, which are generally positive. However, as all users were verified, more data was needed to determine the veracity of these reviews. 
+- _Multitude of Amazon Devices_ The reviews covered user experiences with a number of Amazon devices. While the reviews consisted of the features that are common to all of these devices, without data on the user's rationale for selection of the device type we cannot state how the device itself contributed to the user's experience with Alexa.
 
 ## Discussion:
+** ADD OVERALL CONCLUSIONS**
+
+For future work on this study, we recommend the use of a larger dataset. These data could include reviews from 2019 on and/or be obtained via web scraping. We attempted to use more advanced methods of encoding, such as [GloVe](https://nlp.stanford.edu/projects/glove/); however, we both received too many issues within the allowable time to complete this project. As an unsupervised learning algorithm for word represetation, GloVe could have provided stronger linear substructures and more nuance between word pairs to our analysis. Additionally, we think using a recurrent neural network (RNN) for text processing could result in more advanced summarization than topic modeling alone. However, we believe comparable results could also be acheieved with extended experimentations with hyperparameter tuning for logarithmic regression, random forest, and neural network parameters.
+
+
+## References:
+- Perez, S. (2018). 39 million Americans now own a smart speaker, report claims. Retrieved from https://techcrunch.com/2018/01/12/39-million-americans-now-own-a-smart-speaker-report-claims/
