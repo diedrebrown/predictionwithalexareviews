@@ -11,7 +11,7 @@ The project folders include the following:
 
 - **[Original Datasets](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/original_datasets)**
 	- These datasets were obtained from [kaggle](https://www.kaggle.com/) and include [Amazon Reviews 2017](https://www.kaggle.com/PromptCloudHQ/amazon-echo-dot-2-reviews-dataset), which became the training set; and, [Amazon Reviews 2018](https://www.kaggle.com/sid321axn/amazon-alexa-reviews), which became the test set.
-- **[Data](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/data)**
+- **[Data](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/data )**
 	- This folder contains the cleaned versions of the datasets used during our analysis.
 - **[Images](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/img)**
 	- This folder includes charts created during the exploratory data analysis and sentiment analysis of the project. For more information on these charts, please refer to our paper and/or our presentation.
@@ -62,7 +62,7 @@ TF-IDF + Random Forest and LSTM neural network gave the best scores on the test 
 - _Multitude of Amazon Devices_ The reviews covered user experiences with a number of Amazon devices. While the reviews consisted of the features that are common to all of these devices, without data on the user's rationale for selection of the device type we cannot state how the device itself contributed to the user's experience with Alexa.
 
 ## Discussion:
-** ADD OVERALL CONCLUSIONS**
+This study showed that consumer reviews are great for judging initial reactions to new product features. From the reviews, it is possible to confirm "likeability" of new product features and initial reactions and predict the potential changes for future product features; however, the accuracy of these reviews is questionable without a lot of data.
 
 For future work on this study, we recommend the use of a larger dataset. These data could include reviews from 2019 on and/or be obtained via web scraping. We attempted to use more advanced methods of encoding, such as [GloVe](https://nlp.stanford.edu/projects/glove/); however, we both received too many issues within the allowable time to complete this project. As an unsupervised learning algorithm for word represetation, GloVe could have provided stronger linear substructures and more nuance between word pairs to our analysis. Additionally, we think using a recurrent neural network (RNN) for text processing could result in more advanced summarization than topic modeling alone. However, we believe comparable results could also be acheieved with extended experimentations with hyperparameter tuning for logarithmic regression, random forest, and neural network parameters.
 
