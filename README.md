@@ -22,7 +22,7 @@ The project folders include the following:
 - **[Notebooks](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/notebooks)**
 	- Exploratory Data Analysis 
 	- Text Sentiment Analysis & Topic Modeling
-- **[Presentation](***ADD LINK HERE***)**
+- **[Presentation](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/presentation)**
 	- Here you will find a pdf of our presentation, which was delivered on 8 December 2020. 
 
 ## Methods:
@@ -42,14 +42,14 @@ We each began the study by conducting an extensive exploratory data analysis (ED
 ## Findings:
 We trained our model with the data from the 2017 Alexa Ratings Dataset and measured its accuracy and F1 score using the 2018 Alexa Ratings Datset.
 
-| Method             | Accuracy      | F1    |
-| :------------------|:-------------:| -----:|
-| TF-IDF + Log Reg   |  0.68         |  0.68 |
-| BERT + Log Reg     |  0.49         |  0.56 |
-| TF-IDF + RF        |  0.72         |  0.68 |
-| BERT +  RF         |  0.65         |  0.59 |
-| LSTM               |  0.71         |  0.69 |
-| _MultiNB + Log Reg_|  0.92         |  0.53 |
+| Method             | Accuracy       | F1      |
+| :------------------|:--------------:| -------:|
+| TF-IDF + Log Reg   |  0.68          |  0.68   |
+| BERT + Log Reg     |  0.49          |  0.56   |
+| TF-IDF + RF        |  0.72          |  0.68   |
+| BERT +  RF         |  0.65          |  0.59   |
+| LSTM               |  0.71          |  0.69   |
+| _MultiNB + Log Reg_|  _0.92_        |  _0.53_ |
 
 TF-IDF + Random Forest and LSTM neural network gave the best scores on the test set. As we can see from the table above, BERT embeddings didn't give a boost in performance for our data. Also, such a simple method as TF-IDF encoding + Logistic Regression gave pretty good scores in comparison to Random Forest and Neural Network. 
 
