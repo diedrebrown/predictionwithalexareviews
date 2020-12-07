@@ -11,7 +11,7 @@ The project folders include the following:
 
 - **[Original Datasets](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/original_datasets)**
 	- These datasets were obtained from [kaggle](https://www.kaggle.com/) and include [Amazon Reviews 2017](https://www.kaggle.com/PromptCloudHQ/amazon-echo-dot-2-reviews-dataset), which became the training set; and, [Amazon Reviews 2018](https://www.kaggle.com/sid321axn/amazon-alexa-reviews), which became the test set.
-- **[Data](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/data**)**
+- **[Data](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/data)**
 	- This folder contains the cleaned versions of the datasets used during our analysis.
 - **[Images](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/img)**
 	- This folder includes charts created during the exploratory data analysis and sentiment analysis of the project. For more information on these charts, please refer to our paper and/or our presentation.
@@ -33,7 +33,7 @@ We each began the study by conducting an extensive exploratory data analysis (ED
 	- Used the spaCy library to normalize the data to make patterns more easily detectable by removing stopwords. The spaCy library was used to do this, as it is the most robust and efficient library for natural language processing. As spaCy can be applied to many languages and has integrations built in for neural network models, it provided eased much of the work we needed.
 	- Creation of a document term matrix for use in topic modeling with Latent Dirichlet Allocation (LDA). The LDA was used to finds groups of words (topics) that appear frequently together.
 - Rating Star Predictions with Machine Learning Models ***ADD WHAT THESE MODELS DO/REPRESENT***:
-	- Tf-IDF Encoding
+	- Tf-IDF Encoding. To 
 	- Logistic Regression 
 	- Random Forest 
 	- Bidirectional Encoder Representations from Transformers (BERT)
