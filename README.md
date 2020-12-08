@@ -25,6 +25,7 @@ The project folders include the following:
 - **[Presentation](https://github.com/diedrebrown/predictionwithalexareviews/tree/main/presentation)**
 	- Here you will find a pdf of our presentation, which was delivered on 8 December 2020. 
 
+
 ## Methods:
 Preliminary review of the data revealed that the 2017 dataset contained 3662 verified customer reviews for Amazon Dot2 Echo and the 2018 Amazon Reviews dataset contained 3150 verified customer reviews of Amazon devices. The main features of each dataset included date of review, star rating, customer review, type of device, and feedback on specific device performance. Though the 2018 data includes all Amazon devices, during this preliminary review we found that the reviews consisted of feedback on features common to all Amazon Alexa devices. Therefore, we included all reviews in our initial analysis.
 
@@ -33,16 +34,19 @@ We each began the study by conducting an extensive exploratory data analysis (ED
 	- Used the spaCy library to normalize the data to make patterns more easily detectable by removing stopwords. The spaCy library was used to do this, as it is the most robust and efficient library for natural language processing. As spaCy can be applied to many languages and has integrations built in for neural network models, it provided eased much of the work we needed.
 	- Creation of a document term matrix for use in topic modeling with **Latent Dirichlet Allocation (LDA)**. The LDA was used to finds groups of words (topics) that appear frequently together.
 - **Rating Star Predictions with Machine Learning Models**:
-	- _Tf-IDF Encoding_  
+	- _Tf-IDF Encoding_   
 	To describe the proportionality of a word relative to the corpus, not just a document. The more frequenly occuring words are less heavily weighted. The result is that this ratio describes how rate something (a word) is within a corpus. 
-	- _Logistic Regression_
+	- _Logistic Regression_   
 	Once vectorized, text data is sparse but has high-dimensionality. By using hyperparameter tuning with Logistic Regression and cross validation, we can obtain a quantative measure of performance of the classifier. As sentiment analysis aims to identify if a text is positive, negative or neutral, logistic regression classifiers are perfect for this because they determine the probability that an observation belongs to one class over another. 
 	- _Random Forest_  
 	As a collection of varying decision trees, each tree can work in its area of expertise and overfit in differnt ways. The average of their results reduces the overfitting of the data.
 	- _Bidirectional Encoder Representations from Transformers (BERT)_  
 	BERT considers all the words of the input reviews simultaneously and then uses an attention mechanism to develop a contextual meaning of the words within each document.
-	- _LSTM Neural Network_  As a gated RNN, in LSTM Neural Networks, the information accumulation (feature evidence) flows through leaky channels and self-loops for long durations (Goodfellow et al. 2016).
-	- _Multinominal Naive Bayes Classifier (MultinomialNB)_  Naive Bayes classifers are very efficient trainers, because they learn parameters by looking at each feature individually and collect per-class statisicts from each feature" (Müller & Guido, 2017, p.70). However, they provide a more generalized performance than linear classifiers. 
+	- _LSTM Neural Network_   
+	As a gated RNN, in LSTM Neural Networks, the information accumulation (feature evidence) flows through leaky channels and self-loops for long durations (Goodfellow et al. 2016).
+	- _Multinominal Naive Bayes Classifier (MultinomialNB)_   
+	Naive Bayes classifiers are very efficient trainers, because they learn parameters by looking at each feature individually and collect per-class statisicts from each feature" (Müller & Guido, 2017, p.70). However, they provide a more generalized performance than linear classifiers. 
+
 
 ## Findings:
 During the initial EDA, we found that both datasets were imbalanced and that the data favored positive/5 star reviews. Yet, we did not find a correlation between review length and positivity. After encoding for positivity by review, we found that this further extended to the sentiment of the words used. We were able to predict with a high degree of accuracy that both datasets were mostly positive.
@@ -74,7 +78,7 @@ We trained our model with the data from the 2017 Alexa Ratings Dataset and measu
 | LSTM               |  0.71          |  0.69   |
 | _MultiNB + Log Reg_|  _0.92_        |  _0.53_ |
 
-TF-IDF + Random Forest and LSTM neural network gave the best scores on the test set. As we can see from the table above, BERT embeddings didn't give a boost in performance for our data. Also, such a simple method as TF-IDF encoding + Logistic Regression gave pretty good scores in comparison to Random Forest and Neural Network. 
+TF-IDF + Random Forest and LSTM neural network gave the best scores on the test set. As we can see from the table above, BERT embeddings didn't give a boost in performance for our data. Also, such a simple method as TF-IDF encoding + Logistic Regression gave pretty good scores in comparison to Random Forest and Neural Network. Based on these results, we decided to try using a MultinomialNB classifier on TF-IDF encoded text, as we discovered that it was an efficient at classifying multiclass training data. Also, given the polarity of our reviews, we eliminated reviews that were 2, 3, and 4 stars as not much information was dervived from the average reviews and they did not support either poles of the data. 
 
 
 ## Study Limitations:
@@ -82,6 +86,7 @@ TF-IDF + Random Forest and LSTM neural network gave the best scores on the test 
 - _Time of Year Seasonality_ The 2017 dataset covers Sept 1st - Oct 30th. While the 2018 set covers only the month of July. As we discovered with an outlier review, there was a reduction in price this month due to Amazon Prime Day specials.
 - _Paid Reviews?_ It is possible that the data contained paid reviews, which are generally positive. However, as all users were verified, more data was needed to determine the veracity of these reviews. 
 - _Multitude of Amazon Devices_ The reviews covered user experiences with a number of Amazon devices. While the reviews consisted of the features that are common to all of these devices, without data on the user's rationale for selection of the device type we cannot state how the device itself contributed to the user's experience with Alexa.
+
 
 ## Discussion:
 This study showed that consumer reviews are great for judging initial reactions to new product features. From the reviews, it is possible to confirm "likeability" of new product features and initial reactions and predict the potential changes for future product features; however, the accuracy of these reviews is questionable without a lot of data.
