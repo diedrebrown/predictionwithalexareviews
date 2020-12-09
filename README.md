@@ -1,4 +1,4 @@
-# Prediction with Amazaon Alexa Reviews
+# Prediction with Amazon Alexa Reviews
 
 ## By Elena Korshakova and Diedre Brown
 ### Pratt Institute, Fall 2020
